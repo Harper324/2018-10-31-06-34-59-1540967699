@@ -1,7 +1,8 @@
 'use strict';
 
-function calculate_elements_sum(collection, element) {
+function find_element_last_subscript(collection, element) {
+  var lastSubscript = collection.lastIndexOf(element);
+  return lastSubscript;
   //在这里写入代码
 }
-
-module.exports = calculate_elements_sum;
+module.exports = find_element_last_subscript;

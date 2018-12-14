@@ -4,7 +4,7 @@ var create_updated_collection = require("../../main/section_3/practice_1/practic
 
 describe('practice-3-1', function() {
 
-  var collection_a = [
+  var collection_a =[
     {key: "a", count: 2},
     {key: "e", count: 2},
     {key: "h", count: 2},
