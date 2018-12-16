@@ -1,6 +1,5 @@
 'use strict';
 
-function double_to_one(collection) {
   function double_to_one(collection) {
     var array = collection.reduce(
       function (a, b) {

@@ -15,7 +15,6 @@ function count_same_elements(collection) {
 
   }
   return result;
-  //在这里写入代码
 }
 
 module.exports = count_same_elements;
