@@ -7,9 +7,6 @@ var even_asc_odd_desc = function (collection) {
         return b - a;
     });
     return even.concat(odd);
-
-
-
 };
 function get_even(element) {
     return element.filter(function (element) {

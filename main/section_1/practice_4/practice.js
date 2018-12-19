@@ -8,7 +8,6 @@ function collect_same_elements(collection_a, object_b) {
 
   })
   return newArray;
-  //在这里写入代码
 }
 
 

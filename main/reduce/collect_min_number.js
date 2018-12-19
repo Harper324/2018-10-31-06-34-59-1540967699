@@ -6,7 +6,6 @@ function collect_min_number(collection) {
   });
 
   return array[0];
-  //在这里写入代码
 }
 
 module.exports = collect_min_number;

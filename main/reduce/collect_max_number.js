@@ -7,7 +7,6 @@ function collect_max_number(collection) {
 
   return array[0];
 
-  //在这里写入代码
 }
 
 

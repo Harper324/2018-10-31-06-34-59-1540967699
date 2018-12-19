@@ -11,7 +11,6 @@ function spilt_to_zero(number, interval) {
 
   array.push(number / 10);
   return array;
-  //在这里写入代码
 }
 
 module.exports = spilt_to_zero;

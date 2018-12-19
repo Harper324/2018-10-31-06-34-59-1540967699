@@ -7,19 +7,18 @@ function get_letter_interval(number_a, number_b) {
   });
 }
 function get_integer_interval(number_a, number_b) {
+  var array = [];
   if (number_a >= number_b) {
     let lastIndex = number_a - number_b;
-    for (i = 0; i <= lastIndex; i++) {
-      var arr = [];
-      arr[i] = number_a - i;
+    for (var i = 0; i <= lastIndex; i++) {
+      array[i] = number_a - i;
     }
   } else {
     let lastIndex = number_b - number_a;
-    for (i = 0; i <= lastIndex; i++) {
-      var arr = [];
-      arr[i] = number_b + i;
+    for (var i = 0; i <= lastIndex; i++) {
+      array[i] = number_a + i;
     }
   }
-  return arr;
+  return array;
 }
 module.exports = get_letter_interval;

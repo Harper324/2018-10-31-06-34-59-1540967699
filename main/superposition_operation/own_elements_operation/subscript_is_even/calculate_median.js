@@ -2,9 +2,6 @@
 var calculate_median = function (collection) {
     var even = get_even(collection);
     return get_median(even);
-
-
-
 };
 
 function get_median(element) {

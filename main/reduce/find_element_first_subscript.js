@@ -1,9 +1,7 @@
 'use strict';
 
 function find_element_first_subscript(collection, element) {
-  var firstSubscript = collection.indexOf(element);
-  return firstSubscript;
-  //在这里写入代码
+  return collection.indexOf(element);
 }
 
 module.exports = find_element_first_subscript;

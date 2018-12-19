@@ -1,13 +1,9 @@
 'use strict';
 
 function choose_even(collection) {
-  function even(element) {
-    return element % 2 == 0;
-  }
-  var newArray = collection.filter(even);
-  return newArray;
-
-  //在这里写入代码
+  return collection.filter(even);
 }
-
+function even(element) {
+  return element % 2 == 0;
+}
 module.exports = choose_even;
