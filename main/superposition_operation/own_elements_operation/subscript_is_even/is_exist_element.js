@@ -13,7 +13,7 @@ var is_exist_element = function (collection, element) {
 };
 function get_even_index(element) {
     return element.filter(function (value, index) {
-        if (index % 2 === 1) {
+        if (index % 2 === 0) {
             return value;
         }
     });
