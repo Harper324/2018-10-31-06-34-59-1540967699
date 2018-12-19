@@ -1,5 +1,16 @@
 function count_same_elements(collection) {
-  var countedElements = collection.reduce(function (allNumbers, number) {
+  var countedElements = countElement(collection);
+  var keys = Object.keys(countedElements);
+  var times = Object.values(countedElements);
+  var result = [];
+  for (i = 0; i < keys.length; i++) {
+    result.push({ name: keys[i], summary: times[i] })
+
+  }
+  return addSame(countShortLine(result));
+}
+function countElement(element) {
+  return element.reduce(function (allNumbers, number) {
     if (number in allNumbers) {
       allNumbers[number]++;
     } else {
@@ -7,24 +18,17 @@ function count_same_elements(collection) {
     }
     return allNumbers;
   }, {});
-  var keys = Object.keys(countedElements);
-  var times = Object.values(countedElements);
-  var result = [];
-  for (i = 0; i < keys.length; i++) {
-    result.push({ key: keys[i], count: times[i] })
-
-  }
-  return addSame(countShortLine(result));
 }
+
 function countShortLine(element) {
   element.map(function (ele) {
-    if (ele.key.length > 1) {
-      if (ele.key.includes('[')) {
-        ele.count = Number(ele.key.slice(2, ele.key.length - 1));
-        ele.key = ele.key[0];
+    if (ele.name.length > 1) {
+      if (ele.name.includes('[')) {
+        ele.summary = Number(ele.name.slice(2, ele.name.length - 1));
+        ele.name = ele.name[0];
       } else {
-        ele.count = Number(ele.key.slice(2));
-        ele.key = ele.key[0];
+        ele.summary = Number(ele.name.slice(2));
+        ele.name = ele.name[0];
         return ele;
       }
     }
@@ -32,15 +36,16 @@ function countShortLine(element) {
   });
   return element;
 }
+
 function addSame(a) {
   var result = [];
-  for (i = 0; i < a.length; i++) {
+  for (var i = 0; i < a.length; i++) {
     if (!(result.find(function (element) {
-      return element.key === a[i].key;
+      return element.name === a[i].name;
     }))) {
-      for (j = i + 1; j < a.length; j++) {
-        if (a[i].key === a[j].key) {
-          a[i].count += a[j].count;
+      for (var j = i + 1; j < a.length; j++) {
+        if (a[i].name === a[j].name) {
+          a[i].summary += a[j].summary;
         }
       }
       result.push(a[i]);
@@ -48,4 +53,6 @@ function addSame(a) {
   }
   return result;
 }
+
+
 module.exports = count_same_elements;
