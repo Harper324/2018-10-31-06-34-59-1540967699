@@ -12,21 +12,21 @@ function get_even_index(element) {
         }
     });
 }
-function get_single(element) {
-    var single = element.sort(function (a, b) {
-        return a - b;
-    })
-    var singleNumber = [];
-    for (var i = 0; i < single.length; i++) {
-        if (single[i] !== single[i + 1] && single[i] !== single[i - 1]) {
-            singleNumber.push(single[i]);
+
+function get_single(a) {
+    for (var i = 0; i < a.length; i++) {
+        for (var j = i + 1; j < a.length; j++) {
+            var length = a.length;
+            if (a[i] === a[j]) {
+                a.splice(j, 1);
+            }
+            if (length !== a.length) {
+                a.splice(i, 1);
+            }
         }
-
     }
-    return singleNumber;
-
+    return a;
 }
-
 
 
 module.exports = single_element;
