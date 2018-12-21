@@ -1,7 +1,9 @@
 'use strict';
 var single_element = function (collection) {
     var evenIndex = get_even_index(collection);
-    var single = get_single(evenIndex);
+    var single = evenIndex.filter(function (element, index, array) {
+        return array.indexOf(element) === array.lastIndexOf(element);
+    });
     return single;
 
 };
@@ -13,20 +15,6 @@ function get_even_index(element) {
     });
 }
 
-function get_single(a) {
-    for (var i = 0; i < a.length; i++) {
-        for (var j = i + 1; j < a.length; j++) {
-            var length = a.length;
-            if (a[i] === a[j]) {
-                a.splice(j, 1);
-            }
-            if (length !== a.length) {
-                a.splice(i, 1);
-            }
-        }
-    }
-    return a;
-}
 
 
 module.exports = single_element;
