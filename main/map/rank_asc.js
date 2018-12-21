@@ -5,4 +5,4 @@ var rank_asc = function (collection) {
   });
 };
 
-//module.exports = rank_asc;
+module.exports = rank_asc;
