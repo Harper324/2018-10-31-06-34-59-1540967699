@@ -1,19 +1,29 @@
 'use strict';
 
-function get_integer_interval(number_a, number_b) {
-  var arr = [];
+var get_integer_interval = (number_a, number_b) => {
   if (number_a >= number_b) {
-    let lastIndex = number_a - number_b;
-    for (let i = 0; i <= lastIndex; i++) {
-      arr[i] = number_a - i;
-    }
+    return self_minus(number_a, number_b);
+
   } else {
-    let lastIndex = number_b - number_a;
-    for (let i = 0; i <= lastIndex; i++) {
-      arr[i] = number_a + i;
-    }
+    return self_add(number_a, number_b);
+  }
+}
+
+var self_add = (number_a, number_b) => {
+  var arr = [];
+  for (let i = 0; i <= number_b - number_a; i++) {
+    arr[i] = number_a + i;
   }
   return arr;
 }
+
+var self_minus = (number_a, number_b) => {
+  var arr = [];
+  for (let i = 0; i <= number_a - number_b; i++) {
+    arr[i] = number_a - i;
+  }
+  return arr;
+}
+
 module.exports = get_integer_interval;
 

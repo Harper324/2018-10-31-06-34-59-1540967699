@@ -1,7 +1,8 @@
 'use strict';
+var get_integer_interval = require('../../main/collectionOperator/get_integer_interval.js');
 
-function get_letter_interval_2(number_a, number_b) {
-  var array = series(number_a, number_b);
+var get_letter_interval_2=(number_a, number_b) => {
+  var array = get_integer_interval(number_a, number_b);
   for (var j = 0; j < array.length; j++) {
     if (array[j] <= 26) {
       array[j] = String.fromCharCode(96 + parseInt(array[j]));
@@ -13,20 +14,6 @@ function get_letter_interval_2(number_a, number_b) {
   }
   return array;
 }
-function series(number_a, number_b) {
-  var arr = [];
-  if (number_a >= number_b) {
-    let lastIndex = number_a - number_b;
-    for (let i = 0; i <= lastIndex; i++) {
-      arr.push(number_a - i);
-    }
-  } else {
-    let lastIndex = number_b - number_a;
-    for (let i = 0; i <= lastIndex; i++) {
-      arr.push(number_a + i);
-    }
-  }
-  return arr;
-}
+
 module.exports = get_letter_interval_2;
 
