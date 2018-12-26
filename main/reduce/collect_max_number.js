@@ -1,13 +1,8 @@
 'use strict';
 
-function collect_max_number(collection) {
-  var array = collection.sort(function(a,b){
-    return b - a;
-  });
+var collect_max_number = collection => collection.sort((a, b) => b - a)[0];
 
-  return array[0];
 
-}
 
 
 module.exports = collect_max_number;

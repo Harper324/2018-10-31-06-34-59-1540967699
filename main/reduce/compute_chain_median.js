@@ -1,9 +1,7 @@
 'use strict';
 
-function compute_chain_median(collection) {
-  var array = collection.split('->').sort(function (a, b) {
-    return a - b;
-  });
+var compute_chain_median = collection => {
+  var array = collection.split('->').sort((a, b) => a - b);
   var lowMiddle = Math.floor((array.length - 1) / 2);
   var highMiddle = Math.ceil((array.length - 1) / 2);
 

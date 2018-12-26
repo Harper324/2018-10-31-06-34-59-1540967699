@@ -1,6 +1,5 @@
 'use strict';
 
-function find_element_last_subscript(collection, element) {
-  return collection.lastIndexOf(element);
-}
+var find_element_last_subscript = (collection, element) => collection.lastIndexOf(element);
+
 module.exports = find_element_last_subscript;

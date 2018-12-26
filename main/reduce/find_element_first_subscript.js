@@ -1,8 +1,7 @@
 'use strict';
 
-function find_element_first_subscript(collection, element) {
-  return collection.indexOf(element);
-}
+var find_element_first_subscript = (collection, element) => collection.indexOf(element);
+
 
 module.exports = find_element_first_subscript;
 
