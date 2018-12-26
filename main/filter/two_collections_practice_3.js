@@ -1,6 +1,6 @@
 'use strict';
 
-function choose_divisible_integer(collection_a, collection_b) {
+var choose_divisible_integer = (collection_a, collection_b) => {
   var array = [];
   for (var i = 0; i < collection_a.length; i++) {
     for (var j = 0; j < collection_b.length; j++) {

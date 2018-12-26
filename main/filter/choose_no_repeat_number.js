@@ -1,6 +1,6 @@
 'use strict';
 
-function choose_no_repeat_number(collection) {
+var choose_no_repeat_number=(collection) => {
   var array = [];
   for (var i = 0; i < collection.length; i++) {
     if (array.indexOf(collection[i]) === -1) {
@@ -9,5 +9,7 @@ function choose_no_repeat_number(collection) {
   }
   return array;
 }
+
+
 
 module.exports = choose_no_repeat_number;

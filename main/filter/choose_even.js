@@ -1,9 +1,6 @@
 'use strict';
 
-function choose_even(collection) {
-  return collection.filter(even);
-}
-function even(element) {
-  return element % 2 == 0;
-}
+var choose_even = (collection => collection.filter(element => element % 2 == 0));
+
+
 module.exports = choose_even;
