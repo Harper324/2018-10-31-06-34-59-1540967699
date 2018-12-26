@@ -1,15 +1,12 @@
 'use strict';
 
-function double_to_one(collection) {
-  var array = collection.reduce(
-    function (a, b) {
-      return a.concat(b);
-    },
-    []
-  );
-  var newArray = array.filter(function (element, index, self) {
-    return self.indexOf(element) === index;
-  })
-  return newArray;
-}
+var double_to_one = (collection => collection.reduce((a, b) => {
+  return a.concat(b);
+},
+  []
+).filter((element, index, self) => {
+  return self.indexOf(element) === index;
+}));
+
+
 module.exports = double_to_one;
