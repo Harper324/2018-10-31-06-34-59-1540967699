@@ -1,8 +1,6 @@
 'use strict';
-function rank_by_two_large_one_small(collection) {
-  var sortArray = collection.sort(function (a, b) {
-    return a - b;
-  });
+var rank_by_two_large_one_small = collection => {
+  var sortArray = collection.sort((a, b) => a - b);
   for (var i = 0; i < sortArray.length; i += 3) {
     if ((i + 2) < sortArray.length) {
       var first = sortArray[i];
@@ -13,7 +11,6 @@ function rank_by_two_large_one_small(collection) {
   }
   return sortArray.filter(deleteUnderfined);
 }
-function deleteUnderfined(element) {
-  return element;
-}
+var deleteUnderfined = element => element;
+
 module.exports = rank_by_two_large_one_small;

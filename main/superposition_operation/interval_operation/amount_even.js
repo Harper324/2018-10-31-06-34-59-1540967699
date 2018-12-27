@@ -1,12 +1,7 @@
 'use strict';
 
 
-function amount_even(collection) {
-  return collection.filter(get_even).reduce(function (a, b) {
-    return a + b;
-  });
-}
-function get_even(element) {
-  return element % 2 === 0;
-}
+var amount_even = collection => collection.filter(element => element % 2 === 0).reduce((a, b) => a + b);
+
+
 module.exports = amount_even;

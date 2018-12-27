@@ -1,14 +1,8 @@
 'use strict';
-var calculate_average = function (collection) {
-    var even = get_even(collection);
-    return (even.reduce(function (a, b) {
-        return a + b;
-    })) / even.length;
-
-
-};
-function get_even(element) {
-    return element.filter(function (value, index) {
+var calculate_average = collection => (get_even(collection)
+    .reduce((a, b) => a + b)) / get_even(collection).length;
+var get_even = element => {
+    return element.filter((value, index) => {
         if (index % 2 === 1) {
             return value;
         }

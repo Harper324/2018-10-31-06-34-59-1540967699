@@ -1,21 +1,16 @@
 'use strict';
-var is_exist_element = function (collection, element) {
+var is_exist_element = (collection, element) => {
     var evenIndex = get_even_index(collection);
-    if (evenIndex.find(function (ele) {
-        return ele === element;
-
-    })) {
+    if (evenIndex.find(ele => ele === element)) {
         return true;
     } else {
         return false;
     }
-
 };
-function get_even_index(element) {
-    return element.filter(function (value, index) {
-        if (index % 2 === 0) {
-            return value;
-        }
-    });
-}
+var get_even_index = element => element.filter((value, index) => {
+    if (index % 2 === 0) {
+        return value;
+    }
+});
+
 module.exports = is_exist_element;
