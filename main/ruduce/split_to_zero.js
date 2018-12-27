@@ -1,6 +1,6 @@
 'use strict';
 
-function spilt_to_zero(number, interval) {
+var spilt_to_zero = (number, interval) => {
   number = number * 10;
   interval = interval * 10;
   var array = [];
