@@ -1,11 +1,6 @@
 'use strict';
 
-function hybrid_operation(collection) {
-  return collection.map(function (element) {
-    return 3 * element + 2;
-  }).reduce(function (a, b) {
-    return a + b;
-  });
-}
+var hybrid_operation = collection => collection.map(element => 3 * element + 2
+).reduce((a, b) => a + b);
 module.exports = hybrid_operation;
 

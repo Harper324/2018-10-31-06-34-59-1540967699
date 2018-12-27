@@ -1,22 +1,11 @@
 'use strict';
 
-function hybrid_operation_to_uneven(collection) {
+var hybrid_operation_to_uneven = collection => get_triple_add_five(get_odd(collection)).reduce((a, b) => a + b);
 
-  return get_triple_add_two(get_odd(collection)).reduce(function (a, b) {
-    return a + b;
-  });
-}
+var get_odd = element => element.filter(element => element % 2 === 1);
 
-function get_odd(element) {
-  return element.filter(function (element) {
-    return element % 2 === 1;
-  });
-}
-function get_triple_add_two(element) {
-  return element.map(function (element) {
-    return element * 3 + 5;
-  });
-}
+var get_triple_add_five = element => element.map(element => element * 3 + 5);
+
 
 
 module.exports = hybrid_operation_to_uneven;

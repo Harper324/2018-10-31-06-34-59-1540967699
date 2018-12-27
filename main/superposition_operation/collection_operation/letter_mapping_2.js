@@ -1,12 +1,7 @@
 'use strict';
 
-function average_to_letter(collection) {
-  var averageNumber = Math.ceil((collection.reduce(function (a, b) {
-    return a + b;
-  })) / collection.length);
-  var averageLetter = String.fromCharCode(96 + parseInt(averageNumber));
-  return averageLetter;
-}
-console.log(average_to_letter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+var average_to_letter = collection =>
+  String.fromCharCode(96 + parseInt(Math.ceil((collection.reduce((a, b) => a + b)) / collection.length)));
+
 module.exports = average_to_letter;
 
