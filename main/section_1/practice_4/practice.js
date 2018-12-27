@@ -1,12 +1,8 @@
-function collect_same_elements(collection_a, object_b) {
-  var array = collection_a.filter(function (element) {
-    return object_b.value.indexOf(element.key) > -1;
-  })
-  var newArray = [];
-  array.forEach(function (element) {
-    newArray.push(Object.values(element).toString());
 
-  })
+var collect_same_elements = (collection_a, object_b) => {
+  var newArray = [];
+  collection_a.filter(element => object_b.value.indexOf(element.key) > -1).forEach(element =>
+    newArray.push(Object.values(element).toString()));
   return newArray;
 }
 
