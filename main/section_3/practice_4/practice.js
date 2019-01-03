@@ -1,7 +1,11 @@
 var create_updated_collection = (collection_a, object_b) => {
   var result = [];
-  for (i = 0; i < Object.keys(countElements(collection_a)).length; i++) {
-    result.push({ key: Object.keys(countElements(collection_a))[i], count: Object.values(countElements(collection_a))[i] })
+  var countElement = countElements(collection_a);
+  for (i = 0; i < Object.keys(countElement).length; i++) {
+    result.push({
+      key: Object.keys(countElement)[i],
+      count: Object.values(countElement)[i]
+    })
   }
   return countShortLine(result).filter(element => {
     if (object_b.value.includes(element.key)) {

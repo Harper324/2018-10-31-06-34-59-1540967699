@@ -1,4 +1,4 @@
-
+// todo:simplify addSame()
 var count_same_elements = collection => {
   var result = [];
   for (i = 0; i < Object.keys(countElements(collection)).length; i++) {

@@ -1,6 +1,6 @@
 'use strict';
 
-var grouping_count = (collection) => {
+var grouping_count = collection => {
   return collection.reduce((allNames, name) => {
     if (name in allNames) {
       allNames[name]++;

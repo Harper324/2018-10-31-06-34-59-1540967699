@@ -4,9 +4,9 @@ var get_integer_interval = (number_a, number_b) => {
   if (number_a >= number_b) {
     return self_minus(number_a, number_b);
 
-  } else {
-    return self_add(number_a, number_b);
   }
+  return self_add(number_a, number_b);
+
 }
 
 var self_add = (number_a, number_b) => {

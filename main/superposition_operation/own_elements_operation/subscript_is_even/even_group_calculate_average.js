@@ -8,9 +8,10 @@ var even_group_calculate_average = collection => {
     var threeNumber = get_even_number(get_even_index(collection)).filter(element => 99 < element && element < 1000);
 
     var result = [];
-    if (!(oneNumber == false) && !(twoNumber == false) && !(threeNumber == false)) {
-        result = [add(oneNumber) / oneNumber.length, add(twoNumber) / twoNumber.length, add(threeNumber) / threeNumber.length];
-    } else if (oneNumber == false && twoNumber == false && !(threeNumber == false)) {
+    if (oneNumber.length > 0 && twoNumber.length > 0 && threeNumber.length > 0) {
+        result = [add(oneNumber) / oneNumber.length, add(twoNumber) / twoNumber.length, 
+            add(threeNumber) / threeNumber.length];
+    } else if (oneNumber == false && twoNumber == false && threeNumber.length > 0) {
         result = [add(threeNumber) / threeNumber.length];
     } else if (oneNumber == false && twoNumber == false && threeNumber == false) {
         result = [0];

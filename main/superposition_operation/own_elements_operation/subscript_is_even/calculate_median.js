@@ -7,11 +7,6 @@ var get_median = element => {
     return (element[lowMiddle] + element[highMiddle]) / 2;
 }
 
-var get_even = element => {
-    return element.filter(function (value, index) {
-        if (index % 2 === 1) {
-            return value;
-        }
-    });
-}
+var get_even = element => element.filter((value, index) => index % 2 === 1);
+
 module.exports = calculate_median;

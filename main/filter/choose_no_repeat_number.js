@@ -1,6 +1,6 @@
 'use strict';
 
-var choose_no_repeat_number=(collection) => {
+var choose_no_repeat_number = collection => {
   var array = [];
   for (var i = 0; i < collection.length; i++) {
     if (array.indexOf(collection[i]) === -1) {
